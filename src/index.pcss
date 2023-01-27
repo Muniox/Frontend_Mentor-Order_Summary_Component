@@ -1,70 +1,256 @@
+/*
+********************colors*********************
+*/
+
+/******************primary*******************/
+$pr-pale-blue: hsl(225, 100%, 94%);
+$pr-bright-blue: hsl(245, 75%, 52%);
+
+/******************neutral*******************/
+
+$very-pale-blue: hsl(225, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+
+/*
+***********************************************
+*/
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  font-size: 62.5%;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  font-family: 'Red Hat Display', sans-serif;
+  // height: 100vh;
+  background-color: $pr-pale-blue;
+  display: grid;
+  grid-auto-rows: max-content;
+  justify-content: center;
+  align-content: center;
+  gap: 2rem;
+  color: $dark-blue;
   min-height: 100vh;
+  background-image: url(../images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 30%;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.card {
+  max-width: 37.22rem;
+  // border: 1px solid black;
+  text-align: center;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  margin: auto;
+  background-color: hsl(0, 0%, 98%);
+  box-shadow: 0 0.5rem 2rem -1.5rem hsl(245, 75%, 52%);
+  margin: 0 5%;
+  min-width: 20rem;
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    margin: 3rem 0 1.5rem 0;
+    font-weight: 900;
+  }
+
+  &__text {
+    display: inline-block;
+    width: 80%;
+    line-height: 2.5rem;
+    font-size: 1.6rem;
+    color: $desaturated-blue;
+  }
+
+  &__plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $very-pale-blue;
+    height: 8rem;
+    width: 85%;
+    margin: 2rem auto;
+    border-radius: 1.5rem;
+    padding: 0 5%;
+    flex-wrap: wrap;
+  }
+
+  &__plan-text {
+    font-weight: 700;
+    font-size: 1.6rem;
+
+    span {
+      font-weight: 500;
+      color: $desaturated-blue;
+    }
+  }
+
+  &__plan-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 14.8rem;
+  }
+
+  &__link {
+    color: $pr-bright-blue;
+    font-weight: 900;
+    font-size: 1.6rem;
+  }
+
+  &__link-item:hover {
+    text-decoration: none;
+    color: hsl(245, 83%, 68);
+  }
+
+  &__link-item:visited {
+    color: hsl(245, 83%, 68);
+  }
+
+  &__button {
+    display: inline-block;
+    width: 85%;
+    height: 5rem;
+    background: $pr-bright-blue;
+    border: none;
+    border-radius: 1.5rem;
+    color: $very-pale-blue;
+    font-weight: 900;
+    box-shadow: 0 1.5rem 2.5rem -0.8rem hsla(245, 75%, 52%, 0.4);
+    cursor: pointer;
+    font-size: 1.4rem;
+  }
+
+  &__button:hover {
+    background: hsl(245, 83%, 68);
+  }
+
+  &__button:active {
+    transform: translate(0px, 2px);
+    width: 84%;
+    box-shadow: 0 0.5rem 2rem 0.1rem hsla(245, 75%, 52%, 0.4);
+  }
+
+  &__cancel-link {
+    display: inline-block;
+    font-weight: 900;
+    font-size: 1.4rem;
+    text-decoration: none;
+    margin: 2.5rem auto;
+    color: $desaturated-blue;
+  }
+
+  &__cancel-link:hover {
+    color: $dark-blue;
+  }
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+// .attribution{
+//     align-self: end;
+// }
+
+/*
+********************335px*********************
+jest obsługiwany domyślnie
+*/
+
+/*
+********************375px*********************
+*/
+
+@media only screen and (min-width: 21em) {
+  body {
+    background-image: url(../images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+
+  _:-ms-lang(x),
+  .ie10up, .card__plan-text {
+    margin-left: 1rem
   }
 }
+
+/*
+********************more than 375px*********************
+*/
+
+@media only screen and (min-width: 29.4375em) {
+  body {
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+  }
+  .card {
+    min-width: 45rem;
+    min-height: 70rem;
+    margin: 0;
+
+    &__title {
+      margin: 4rem auto 2rem auto;
+    }
+
+    &__text {
+      line-height: 3rem;
+      font-size: 1.8rem;
+      width: 85%;
+    }
+
+    &__plan {
+      height: 10rem;
+      margin: 3rem auto 3rem auto;
+    }
+
+    &__plan-container {
+      gap: 3rem;
+    }
+  }
+
+  _:-ms-lang(x),
+  .ie10up, .card__plan-text {
+    margin-left: 3rem
+  }
+}
+
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+/******************************************/
+/*           IE Hacks   no-RWD            */
+/******************************************/
+
+_:-ms-lang(x),
+.ie10up, :root {
+  display: flex;
+  flex-direction: column;
+}
+
+_:-ms-lang(x),
+.ie10up,
+body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  flex-direction: column;
+}
+
+
