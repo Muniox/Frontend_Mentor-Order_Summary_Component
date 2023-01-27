@@ -2,67 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-
-    <title>Frontend Mentor | Order summary card</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
+    <title>Vite + React + TS</title>
   </head>
   <body>
-    <div class="card">
-      <img class="card__image" src="./images/illustration-hero.svg" alt="" />
-      <h1 class="card__title">Order Summary</h1>
-
-      <div class="card__text">
-        You can now listen to millions of songs, audiobooks, and podcasts on any
-        device anywhere you like!
-      </div>
-      <div class="card__plan">
-        <div class="card__plan-container">
-          <img
-            class="card__plan-image"
-            src="./images/icon-music.svg"
-            alt="music ico"
-          />
-          <div class="card__plan-text">
-            Annual Plan<br />
-            <span>$59.99/year</span>
-          </div>
-        </div>
-
-        <div class="card__link">
-          <a href="#" class="card__link-item">Change</a>
-        </div>
-      </div>
-
-      <button class="card__button" type="submit">Proceed to Payment</button>
-      <div><a href="#" class="card__cancel-link">Cancel Order</a></div>
-    </div>
-
-    <div class="attribution">
-      Challenge by
-      <a
-        href="https://www.frontendmentor.io?ref=challenge"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        Frontend Mentor
-      </a>
-      . Coded by
-      <a href="https://www.frontendmentor.io/profile/Muniox"> Muniox </a>.
-    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
