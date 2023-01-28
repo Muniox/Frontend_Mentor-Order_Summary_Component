@@ -1,36 +1,28 @@
-/*
-********************colors*********************
-*/
 
-/******************primary*******************/
-$pr-pale-blue: hsl(225, 100%, 94%);
-$pr-bright-blue: hsl(245, 75%, 52%);
-
-/******************neutral*******************/
-
-$very-pale-blue: hsl(225, 100%, 98%);
-$desaturated-blue: hsl(224, 23%, 55%);
-$dark-blue: hsl(223, 47%, 23%);
-
-/*
-***********************************************
-*/
 :root {
   font-size: 62.5%;
+  /******************primary*******************/
+  --pr-pale-blue: hsl(225, 100%, 94%);
+  --pr-bright-blue: hsl(245, 75%, 52%);
+
+  /******************neutral*******************/
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
 }
 
 body {
   font-family: 'Red Hat Display', sans-serif;
   // height: 100vh;
-  background-color: $pr-pale-blue;
+  background-color: var(--pr-pale-blue);
   display: grid;
   grid-auto-rows: max-content;
   justify-content: center;
   align-content: center;
   gap: 2rem;
-  color: $dark-blue;
+  color: var(--dark-blue);
   min-height: 100vh;
-  background-image: url(../images/pattern-background-mobile.svg);
+  background-image: url(assets/pattern-background-desktop.svg);
   background-repeat: no-repeat;
   background-size: 100% 30%;
 }
@@ -69,14 +61,14 @@ body {
     width: 80%;
     line-height: 2.5rem;
     font-size: 1.6rem;
-    color: $desaturated-blue;
+    color: var(--desaturated-blue);
   }
 
   &__plan {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: $very-pale-blue;
+    background: var(--very-pale-blue);
     height: 8rem;
     width: 85%;
     margin: 2rem auto;
@@ -91,7 +83,7 @@ body {
 
     span {
       font-weight: 500;
-      color: $desaturated-blue;
+      color: var(--desaturated-blue);
     }
   }
 
@@ -103,28 +95,28 @@ body {
   }
 
   &__link {
-    color: $pr-bright-blue;
+    color: var(--pr-bright-blue);
     font-weight: 900;
     font-size: 1.6rem;
   }
 
   &__link-item:hover {
     text-decoration: none;
-    color: hsl(245, 83%, 68);
+    color: hsl(245, 83%, 68%);
   }
 
   &__link-item:visited {
-    color: hsl(245, 83%, 68);
+    color: hsl(245, 83%, 68%);
   }
 
   &__button {
     display: inline-block;
     width: 85%;
     height: 5rem;
-    background: $pr-bright-blue;
+    background: var(--pr-bright-blue);
     border: none;
     border-radius: 1.5rem;
-    color: $very-pale-blue;
+    color: var(--very-pale-blue);
     font-weight: 900;
     box-shadow: 0 1.5rem 2.5rem -0.8rem hsla(245, 75%, 52%, 0.4);
     cursor: pointer;
@@ -132,7 +124,7 @@ body {
   }
 
   &__button:hover {
-    background: hsl(245, 83%, 68);
+    background: hsl(245, 83%, 68%);
   }
 
   &__button:active {
@@ -147,11 +139,11 @@ body {
     font-size: 1.4rem;
     text-decoration: none;
     margin: 2.5rem auto;
-    color: $desaturated-blue;
+    color: var(--desaturated-blue);
   }
 
   &__cancel-link:hover {
-    color: $dark-blue;
+    color: var(--dark-blue);
   }
 }
 
@@ -170,7 +162,7 @@ jest obsługiwany domyślnie
 
 @media only screen and (min-width: 21em) {
   body {
-    background-image: url(../images/pattern-background-mobile.svg);
+    background-image: url(assets/pattern-background-mobile.svg);
     background-repeat: no-repeat;
     background-size: 100%;
   }
@@ -187,7 +179,7 @@ jest obsługiwany domyślnie
 
 @media only screen and (min-width: 29.4375em) {
   body {
-    background-image: url(../images/pattern-background-desktop.svg);
+    background-image: url(assets/pattern-background-desktop.svg);
     background-repeat: no-repeat;
     background-size: 100% 50%;
   }

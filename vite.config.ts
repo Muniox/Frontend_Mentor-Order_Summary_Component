@@ -5,9 +5,10 @@ import autoprefixer from 'autoprefixer';
 import postcssNested from 'postcss-nested';
 import eslint from 'vite-plugin-eslint';
 
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  // base: '',
+  base: 'https://muniox.github.io/order-summary-component/',
   css: {
     devSourcemap: true,
     postcss: {
@@ -15,7 +16,7 @@ export default defineConfig({
       parser: postcssScss,
       plugins: [
         autoprefixer({}),
-        postcssNested({})
+        postcssNested({}),
       ]
     }
   },
