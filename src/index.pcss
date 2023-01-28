@@ -1,0 +1,248 @@
+
+:root {
+  font-size: 62.5%;
+  /******************primary*******************/
+  --pr-pale-blue: hsl(225, 100%, 94%);
+  --pr-bright-blue: hsl(245, 75%, 52%);
+
+  /******************neutral*******************/
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  // height: 100vh;
+  background-color: var(--pr-pale-blue);
+  display: grid;
+  grid-auto-rows: max-content;
+  justify-content: center;
+  align-content: center;
+  gap: 2rem;
+  color: var(--dark-blue);
+  min-height: 100vh;
+  background-image: url(assets/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 30%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  max-width: 37.22rem;
+  // border: 1px solid black;
+  text-align: center;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  margin: auto;
+  background-color: hsl(0, 0%, 98%);
+  box-shadow: 0 0.5rem 2rem -1.5rem hsl(245, 75%, 52%);
+  margin: 0 5%;
+  min-width: 20rem;
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    margin: 3rem 0 1.5rem 0;
+    font-weight: 900;
+  }
+
+  &__text {
+    display: inline-block;
+    width: 80%;
+    line-height: 2.5rem;
+    font-size: 1.6rem;
+    color: var(--desaturated-blue);
+  }
+
+  &__plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--very-pale-blue);
+    height: 8rem;
+    width: 85%;
+    margin: 2rem auto;
+    border-radius: 1.5rem;
+    padding: 0 5%;
+    flex-wrap: wrap;
+  }
+
+  &__plan-text {
+    font-weight: 700;
+    font-size: 1.6rem;
+
+    span {
+      font-weight: 500;
+      color: var(--desaturated-blue);
+    }
+  }
+
+  &__plan-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 14.8rem;
+  }
+
+  &__link {
+    color: var(--pr-bright-blue);
+    font-weight: 900;
+    font-size: 1.6rem;
+  }
+
+  &__link-item:hover {
+    text-decoration: none;
+    color: hsl(245, 83%, 68%);
+  }
+
+  &__link-item:visited {
+    color: hsl(245, 83%, 68%);
+  }
+
+  &__button {
+    display: inline-block;
+    width: 85%;
+    height: 5rem;
+    background: var(--pr-bright-blue);
+    border: none;
+    border-radius: 1.5rem;
+    color: var(--very-pale-blue);
+    font-weight: 900;
+    box-shadow: 0 1.5rem 2.5rem -0.8rem hsla(245, 75%, 52%, 0.4);
+    cursor: pointer;
+    font-size: 1.4rem;
+  }
+
+  &__button:hover {
+    background: hsl(245, 83%, 68%);
+  }
+
+  &__button:active {
+    transform: translate(0px, 2px);
+    width: 84%;
+    box-shadow: 0 0.5rem 2rem 0.1rem hsla(245, 75%, 52%, 0.4);
+  }
+
+  &__cancel-link {
+    display: inline-block;
+    font-weight: 900;
+    font-size: 1.4rem;
+    text-decoration: none;
+    margin: 2.5rem auto;
+    color: var(--desaturated-blue);
+  }
+
+  &__cancel-link:hover {
+    color: var(--dark-blue);
+  }
+}
+
+// .attribution{
+//     align-self: end;
+// }
+
+/*
+********************335px*********************
+jest obsługiwany domyślnie
+*/
+
+/*
+********************375px*********************
+*/
+
+@media only screen and (min-width: 21em) {
+  body {
+    background-image: url(assets/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  _:-ms-lang(x),
+  .ie10up, .card__plan-text {
+    margin-left: 1rem
+  }
+}
+
+/*
+********************more than 375px*********************
+*/
+
+@media only screen and (min-width: 29.4375em) {
+  body {
+    background-image: url(assets/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+  }
+  .card {
+    min-width: 45rem;
+    min-height: 70rem;
+    margin: 0;
+
+    &__title {
+      margin: 4rem auto 2rem auto;
+    }
+
+    &__text {
+      line-height: 3rem;
+      font-size: 1.8rem;
+      width: 85%;
+    }
+
+    &__plan {
+      height: 10rem;
+      margin: 3rem auto 3rem auto;
+    }
+
+    &__plan-container {
+      gap: 3rem;
+    }
+  }
+
+  _:-ms-lang(x),
+  .ie10up, .card__plan-text {
+    margin-left: 3rem
+  }
+}
+
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+/******************************************/
+/*           IE Hacks   no-RWD            */
+/******************************************/
+
+_:-ms-lang(x),
+.ie10up, :root {
+  display: flex;
+  flex-direction: column;
+}
+
+_:-ms-lang(x),
+.ie10up,
+body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  flex-direction: column;
+}
+
+
