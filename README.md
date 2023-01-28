@@ -1,1 +1,1 @@
-# vite
+# Order summary component
